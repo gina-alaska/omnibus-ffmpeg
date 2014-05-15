@@ -31,3 +31,4 @@
 # ------------------------------
 # solaris_compiler 'gcc'
 build_retries 1
+append_timestamp false
