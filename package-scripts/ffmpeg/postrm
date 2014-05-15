@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary ffmpeg removal steps
+# after package is uninstalled.
+#
+
+echo "ffmpeg has been uninstalled!"
+
+exit 0

@@ -1,0 +1,22 @@
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 2048
+  synced_folders:
+    - ['.', '/home/vagrant/ffmpeg']
+
+provisioner:
+  require_chef_omnibus: 11.8.0
+
+platforms:
+  - name: centos-6.5
+
+suites:
+  - name: default
+    run_list: omnibus::default
+    attributes:
+      omnibus:
+        build_user:  vagrant
+        build_dir:   /home/vagrant/ffmpeg
+        install_dir: /opt/ffmpeg
